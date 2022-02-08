@@ -44,3 +44,27 @@ POST logstash-2018.12.31/_delete_by_query
 }
 ```
 ****************************************
+
+# Change limite Maping
+
+```
+curl -XPUT 'localhost:9200/_settings' -H 'Content-Type: application/json' -d'
+{
+"index" : {
+"mapping" : {
+"total_fields" : {
+"limit" : "100000" } } } }'
+```
+****************************************
+
+# Change limte breaker
+
+```
+curl -X PUT "localhost:9200/_cluster/settings" -H 'Content-Type: application/json' -d'
+{
+     "transient" : {
+         "indices.breaker.total.limit" : "97%"
+     }
+}
+```
+****************************************
