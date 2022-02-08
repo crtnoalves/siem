@@ -1,2 +1,2 @@
 # siem
-Get Rules with mongoDB bash script ( RSA - Netwitness)
+Some tips for SIEM
