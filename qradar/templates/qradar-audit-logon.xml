@@ -1,0 +1,26 @@
+<template>
+          <templatename>qradar-audit</templatename>
+          <templatetype>event</templatetype>
+          <active>true</active>
+          <filename></filename>
+          <subject><![CDATA[${sem_ruleResponse_email_subject}]]>
+           </subject>
+          <body>
+          <![CDATA[The following is an automated response sent to you by the ${AppName} event custom rules engine:
+
+
+           ${StartTime}
+
+           Rule Name:                                     ${RuleName}
+           Rule Description:                              ${RuleDescription}
+
+           Username:                                      ${UserName}
+           Source IP:                                     ${SourceIP}
+           Destination Host:                              ${body.CustomProperty("host")}
+
+           Log Source Name:                               ${LogSourceName}
+
+           Payload:                                       ${Payload}
+           ]]>
+           </body>
+</template>

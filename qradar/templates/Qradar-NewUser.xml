@@ -1,0 +1,30 @@
+<template>
+          <templatename>Qradar-NewUser</templatename>
+          <templatetype>event</templatetype>
+          <active>true</active>
+          <filename></filename>
+          <subject><![CDATA[${sem_ruleResponse_email_subject}]]>
+           </subject>
+          <body>
+          <![CDATA[The following is an automated response sent to you by the ${AppName} event custom rules engine:
+
+
+           ${StartTime}
+
+           Rule Name:                                     ${RuleName}
+           Rule Description:                              ${RuleDescription}
+
+           Action User:                                   ${UserName}
+           New User:                                      ${body.CustomProperty("NewUser")}
+           Event Info:                                    ${Category}
+
+           Log Source Name:                               ${LogSourceName}
+
+           Payload:                                       ${Payload}
+           ]]>
+           </body>
+           <from></from>
+           <to></to>
+           <cc></cc>
+           <bcc></bcc>
+</template>

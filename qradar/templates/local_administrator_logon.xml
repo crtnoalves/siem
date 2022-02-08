@@ -1,0 +1,32 @@
+<template>
+          <templatename>local_admin_logon</templatename>
+          <templatetype>event</templatetype>
+          <active>true</active>
+          <filename></filename>
+          <subject><![CDATA[${sem_ruleResponse_email_subject}]]>
+           </subject>
+          <body>
+          <![CDATA[The following is an automated response sent to you by the ${AppName} event custom rules engine:
+
+
+           ${StartTime}
+
+           Rule Name:                                     ${RuleName}
+           Rule Description:                              ${RuleDescription}
+
+           Account Name:                                  ${body.CustomProperty("AccountName")}
+           Account Domain:                                ${body.CustomProperty("Account_Domain")}
+           Subject Security ID:                           ${body.CustomProperty("Subject_Security_ID")}
+           EventID:                                       ${body.CustomProperty("EventID")}
+           Event Info:                                    ${Category}
+
+           Log Source Name:                               ${LogSourceName}
+
+           Payload:                                       ${Payload}
+           ]]>
+           </body>
+           <from></from>
+           <to></to>
+           <cc></cc>
+           <bcc></bcc>
+</template>

@@ -1,0 +1,31 @@
+<template>
+          <templatename>Firewall_logon</templatename>
+          <templatetype>event</templatetype>
+          <active>true</active>
+          <filename></filename>
+          <subject><![CDATA[${sem_ruleResponse_email_subject}]]>
+           </subject>
+          <body>
+          <![CDATA[The following is an automated response sent to you by the ${AppName} event custom rules engine:
+
+
+           ${StartTime}
+
+           Rule Name:                                     ${RuleName}
+           Rule Description:                              ${RuleDescription}
+
+           Username:                                      ${body.CustomProperty("fw_administrator")}
+           Source IP:                                     ${SourceIP}
+           Event Info:                                    ${body.CustomProperty("fw_subject")}
+           Event Operation:                               ${body.CustomProperty("fw_operation")}
+
+           Log Source Name:                               ${LogSourceName}
+
+           Payload:                                       ${Payload}
+           ]]>
+           </body>
+           <from></from>
+           <to></to>
+           <cc></cc>
+           <bcc></bcc>
+</template>

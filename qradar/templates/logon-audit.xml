@@ -1,0 +1,30 @@
+<template>
+          <templatename>oracle-audit</templatename>
+          <templatetype>event</templatetype>
+          <active>true</active>
+          <filename></filename>
+          <subject><![CDATA[${sem_ruleResponse_email_subject}]]>
+           </subject>
+          <body>
+          <![CDATA[The following is an automated response sent to you by the ${AppName} event custom rules engine:
+
+
+           ${StartTime}
+
+           Rule Name:                                     ${RuleName}
+           Rule Description:                              ${RuleDescription}
+
+           DB USER:                                       ${body.CustomProperty("DB_USER")}
+           OS USER:                                       ${body.CustomProperty("OS_USER")}
+           USERHOST:                                      ${body.CustomProperty("USERHOST")}
+           STATEMENT TYPE:                                ${body.CustomProperty("STATEMENT_TYPE")}
+           OBJECT_NAME:                                   ${body.CustomProperty("OBJECT_NAME")}
+           SQL_TEXT:                                      ${body.CustomProperty("SQL_TEXT")}
+
+           Log Source Name:                               ${LogSourceName}
+
+           Payload:                                       ${Payload}
+           ]]>
+           </body>
+
+</template>
