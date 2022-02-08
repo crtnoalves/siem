@@ -33,6 +33,7 @@ DELETE logstash-2019.*
 
 ## Dev Tools
 
+```
 POST logstash-2018.12.31/_delete_by_query
 {
   "query": {
@@ -41,5 +42,5 @@ POST logstash-2018.12.31/_delete_by_query
     }
   }
 }
-
+```
 ****************************************
