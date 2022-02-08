@@ -1,2 +1,2 @@
 # siem
-Some tips for SIEM
+SIEM tips
