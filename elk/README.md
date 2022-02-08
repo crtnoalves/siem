@@ -28,4 +28,18 @@ curl -XDELETE http://localhost:9200/logstash-2018.xx.xx
 ***API
 GET /_cat/indices?
 DELETE logstash-2019.*
+
+****************************************
+
+## Dev Tools
+
+POST logstash-2018.12.31/_delete_by_query
+{
+  "query": {
+    "match": {
+      "eventlog.category": "Kerberos Service Ticket Operations"
+    }
+  }
+}
+
 ****************************************
