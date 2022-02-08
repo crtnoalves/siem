@@ -1,7 +1,7 @@
 # Project integration RSA + ELK
 - https://community.rsa.com/community/products/netwitness/blog/2019/03/11/netwitness-packet-meta-in-elk
 
-yum install python2
+yum install python2\\
 pip install urllib3 requests
 pip install requests
 
