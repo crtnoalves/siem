@@ -14,7 +14,7 @@ wget https://community.rsa.com/servlet/JiveServlet/download/2823-1-61015/nwsdk_j
 ```
 input {
   exec {
-    command => "/usr/bin/python2.7 /usr/share/logstash/modules/nwsdk_json.py -c http://10.101.13.1:50103 -k '*' -w 'service exists' --user=admin --pass=netwitness"
+    command => "/usr/bin/python2.7 /usr/share/logstash/modules/nwsdk_json.py -c http://192.168.10.1:50103 -k '*' -w 'service exists' --user=admin --pass=netwitness"
     interval => 5
     #schedule => "1 * * * *"
     type => 'netwitness'
