@@ -5,11 +5,12 @@
 yum install python2
 pip install urllib3 requests
 pip install requests
-```
-- wget https://community.rsa.com/servlet/JiveServlet/download/2823-1-61016/mappings.json.zip
-- wget https://community.rsa.com/servlet/JiveServlet/download/2823-1-61015/nwsdk_json.py.zip
 
-## input
+wget https://community.rsa.com/servlet/JiveServlet/download/2823-1-61016/mappings.json.zip
+wget https://community.rsa.com/servlet/JiveServlet/download/2823-1-61015/nwsdk_json.py.zip
+```
+
+## input (Logstash)
 ```
 input {
   exec {
